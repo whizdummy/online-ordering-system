@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{!! asset('css/materialize.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{!! asset('css/style.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body class="blue-grey lighten-5" ng-app="app">
   <nav class="pink" role="navigation">
@@ -20,8 +20,8 @@
         <ul id="slide-out" class="side-nav pink white-text">
             <li>
                 <div class="userView">
-                    <img class="background" src="images/office.jpg" width="100%" height="100%">
-                    <a href="#!user"><img class="circle" src="images/pormon.jpg"></a>
+                    <img class="background" src="{!! asset('images/office.jpg') !!}" width="100%" height="100%">
+                    <a href="#!user"><img class="circle" src="{!! asset('images/pormon.jpg') !!}"></a>
                     <a href="#!name"><span class="white-text name">Miss Elena</span></a>
                     <a href="#!email"><span class="white-text email">Elena.Miss@gmail.com</span></a>
                 </div>
@@ -110,13 +110,12 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/angular.min.js"></script>
-  <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/dashboardCtrl.ctr.js"></script>
-    
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="{!! asset('js/materialize.js') !!}"></script>
+  <script src="{!! asset('js/init.js') !!}"></script>
+  <script src="{!! asset('js/angular.min.js') !!}"></script>
+  <script src="{!! asset('js/app/app.js') !!}"></script>
+  <script src="{!! asset('js/app/controllers/dashboardCtrl.ctr.js') !!}"></script>
+  <script src="{!! asset('node_modules/angular-ui-router/release/angular-ui-router.js') !!}"></script>
 
   </body>
 </html>
