@@ -8,7 +8,7 @@
         $stateProvider
             .state('dashboard', {
                 url: '/dashboard',
-                templateUrl: 'app/templates/dashboardTpl.html',
+                templateUrl: 'js/app/templates/dashboardTpl.html',
                 controller: 'dashboardCtrl as vm'
             })
             .state('productMtn', {

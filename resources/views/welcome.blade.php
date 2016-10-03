@@ -18,6 +18,7 @@
       </ul>
 
         <ul id="slide-out" class="side-nav pink white-text">
+        {!! asset('js/materialize.js') !!}
             <li>
                 <div class="userView">
                     <img class="background" src="{!! asset('images/office.jpg') !!}" width="100%" height="100%">
