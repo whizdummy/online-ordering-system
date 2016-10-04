@@ -9,20 +9,33 @@
         var vm = this;
         vm.persons = [{
 				    "id": 860,
+				    "image": "images/pormon.jpg",
 				    "firstName": "Superman",
-				    "lastName": "Yoda"
+				    "lastName": "Yoda",
+				    "category": "Awesome",
+				    "price": 100
+
 				}, {
 				    "id": 870,
+				    "image": "images/pormon.jpg",
 				    "firstName": "Foo",
-				    "lastName": "Whateveryournameis"
+				    "lastName": "Whateveryournameis",
+				    "category": "Awesome",
+				    "price": 100
 				}, {
 				    "id": 590,
+				    "image": "images/pormon.jpg",
 				    "firstName": "Toto",
-				    "lastName": "Titi"
+				    "lastName": "Titi",
+				    "category": "Awesome",
+				    "price": 100
 				}, {
 				    "id": 803,
+				    "image": "images/pormon.jpg",
 				    "firstName": "Luke",
-				    "lastName": "Kyle"
+				    "lastName": "Kyle",
+				    "category": "Awesome",
+				    "price": 100
 				}];
     }
 })(); 

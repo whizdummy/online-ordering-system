@@ -7,29 +7,74 @@
     <table datatable="ng" class="row-border hover">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>FirstName</th>
-            <th>LastName</th>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Product nem</th>
+            <th>Category</th>
+            <th>Product Price</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="person in vm.persons">
-            <td>{{ person.id }}</td>
+            <td><img class="circle" src=""></td>
             <td>{{ person.firstName }}</td>
             <td>{{ person.lastName }}</td>
+            <td>{{ person.category }}</td>
+            <td>&#8369;{{ person.price | currency: ""}}</td>
+            <td>
+              <div class="row">
+                <div class="col s3">
+                  <a href="" class="btn btn-floating"><i class="material-icons left indigo accent-2">search</i></a>
+                </div>
+                <div class="col s3">
+                  <a href="" class="btn btn-floating"><i class="material-icons left green accent-2">create</i></a>
+                </div>                
+                <div class="col s3">
+                  <a href="" class="btn btn-floating"><i class="material-icons lef red accent-2t">delete</i></a>
+                </div> 
+              </div>
+            </td>
         </tr>
         </tbody>
     </table>
   </div>
 
   <!-- Modal Structure -->
-   <div id="addProduct" class="modal">
+   <div id="addProduct" class="modal" style="border-radius: 10px;">
      <div class="modal-content">
-       <h4>Modal Header</h4>
-       <p>A bunch of text</p>
+       <h4 class="pink-text">Add Product</h4>
+       <p>Tangina ni Ken</p>
+       <div class="row">
+         <div class="col s5">
+           <div class="input-field">
+             <div class="file-field">
+                 <input name="upload" class="dropify z-depth-3" type="file"
+                        data-allowed-file-extensions="png jpg jpeg"
+                        data-default-file="./img/packIcon.png" data-height="220"
+                        data-file-max-size="3M" data-width="150"
+                        data-show-errors="true"/>
+             </div>
+           </div>
+          </div>
+
+          <div class="col s7">
+            <div class="input-field">
+              <input id="name" type="text" name="">
+              <label for="#name">Product Name</label>
+            </div>
+            <div class="input-field">
+              <input id="name" type="text" name="">
+              <label for="#name">Product Price</label>
+            </div>
+
+          </div>
+       </div>
+       
+       
      </div>
      <div class="modal-footer">
-       <a class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+       <a class=" modal-action modal-close waves-effect waves-green btn pink">Create</a>
      </div>
    </div>
 
@@ -37,5 +82,11 @@
        $(document).ready(function(){
            $('.modal-trigger').leanModal();
         });
+
+       $('.dropify').dropify({
+           messages: {
+               'error': 'Oops, something wrong appended.'
+           }
+       });
    </script>
 </div>  
