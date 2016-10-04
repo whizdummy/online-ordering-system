@@ -1,0 +1,44 @@
+<div>
+  <h3 class="header center pink-text thin">Category Maintenance</h3>
+  <div class="row center">
+      <button data-target="addCategory" class="btn modal-trigger pink"><i class="material-icons left">add</i>Add Products</button>
+  </div>
+  
+  <div class="container" style="width: 90% !important;">
+    <table datatable="ng" class="row-border hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in vm.persons">
+            <td>{{ person.id }}</td>
+            <td>{{ person.firstName }}</td>
+            <td>{{ person.lastName }}</td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Structure -->
+   <div id="addCategory" class="modal">
+     <div class="modal-content">
+       <h4>Modal Header</h4>
+       <p>A bunch of text</p>
+     </div>
+     <div class="modal-footer">
+       <a class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+     </div>
+   </div>
+
+   <script type="text/javascript">
+       $(document).ready(function(){
+           $('.modal-trigger').leanModal();
+        });
+   </script>
+  
+        
+</div>  

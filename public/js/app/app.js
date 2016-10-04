@@ -2,18 +2,26 @@
     'use strict';
     
     angular
-        .module("app", ['ui.router'])
+        .module("app", ['ui.router', 'datatables'])
         .config(function($stateProvider, $urlRouterProvider){
        
         $stateProvider
             .state('dashboard', {
                 url: '/dashboard',
-                templateUrl: 'app/templates/dashboardTpl.html',
+                templateUrl: 'js/app/templates/dashboardTpl.html',
                 controller: 'dashboardCtrl as vm'
             })
-            .state('productMtn', {
+            .state('productsMtn', {
                 url: '/products',
-                template: '<h1>Hi<h2>'
+                templateUrl: 'js/app/templates/productsMtn.html',
+                controller: 'productMtnCtrl as vm'
+            })
+            .state('categoryMtn', {
+                url: '/categories',
+                templateUrl: 'js/app/templates/categoryMtn.html',
+                controller: 'categoryMtnCtrl as vm'
             });
+
+        $urlRouterProvider.otherwise('/dashboard')
     });;
 })();

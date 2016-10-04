@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{!! asset('css/materialize.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{!! asset('css/style.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{!! asset('css/jquery.dataTables.min.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{!! asset('node_modules/angular-datatables-master/dist/css/angular-datatables.min.css') !!}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body class="blue-grey lighten-5" ng-app="app">
   <nav class="pink" role="navigation">
@@ -31,8 +33,8 @@
                 <li class="bold"><a class="collapsible-header waves-effect waves-dark white-text"><i class="material-icons left white-text">settings</i>Maintenance</a>
                   <div class="collapsible-body" style="display: none;">
                     <ul class="pink darken-2">
-                      <li><a ui-sref = "dashboard" class="white-text">Products</a></li>
-                      <li><a href="" class="white-text">Category</a></li>
+                      <li><a ui-sref = "productsMtn" class="white-text">Products</a></li>
+                      <li><a ui-sref = "categoryMtn" class="white-text">Category</a></li>
                     </ul>   
                   </div>
                 </li>
@@ -68,7 +70,7 @@
       <br><br>
 
     </div>
-
+    
   
 
   <footer class="page-footer pink">
@@ -109,13 +111,19 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{!! asset('js/jquery-2.1.1.min.js') !!}"></script>
   <script src="{!! asset('js/materialize.js') !!}"></script>
   <script src="{!! asset('js/init.js') !!}"></script>
   <script src="{!! asset('js/angular.min.js') !!}"></script>
+  <script src="{!! asset('js/jquery.dataTables.min.js') !!}"></script>
   <script src="{!! asset('js/app/app.js') !!}"></script>
   <script src="{!! asset('js/app/controllers/dashboardCtrl.ctr.js') !!}"></script>
+  <script src="{!! asset('js/app/controllers/maintenance/productMtnCtrl.ctr.js') !!}"></script>
+  <script src="{!! asset('js/app/controllers/maintenance/categoryMtnCtrl.ctr.js') !!}"></script>
   <script src="{!! asset('node_modules/angular-ui-router/release/angular-ui-router.js') !!}"></script>
+  <script src="{!! asset('node_modules/angular-datatables-master/dist/angular-datatables.min.js') !!}"></script>
+
+  
 
   </body>
 </html>
